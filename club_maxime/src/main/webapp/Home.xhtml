@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form >
+            <table>
+                <tr>
+                    <td>FirstName :</td>
+                    <td><h:inputText size = "10" value = "#{userData.user.firstName}" /></td>
+                </tr>       
+                <tr>
+                    <td>LastName :</td>
+                    <td><h:inputText size = "20" value = "#{userData.user.lastName}" /></td>
+                </tr>          
+                <tr>
+                    <td>BirthDate :</td>
+                    <td><h:inputText size = "5" value = "#{userData.user.birthDate}" /></td>
+                </tr>          
+                <tr>
+                    <td>City:</td>
+                    <td><h:inputText size = "10" value = "#{userData.user.city}" /></td>
+                </tr>  
+                <tr>
+                    <td>Hobby</td>
+                    <td><h:selectOneMenu value = "#{userData.user.hobby}"> 
+                            <f:selectItem itemValue = "#{userData.user.hobby}" itemLabel = "#{userData.user.hobby.get(0)}" /> 
+                            <f:selectItem itemValue = "#{userData.user.hobby}" itemLabel = "#{userData.user.hobby.get(1)}" /> 
+                            <f:selectItem itemValue = "#{userData.user.hobby}" itemLabel = "#{userData.user.hobby.get(2)}" /> 
+                        </h:selectOneMenu> </td>
+                </tr> 
+                <tr>
+                    <td>Sex</td>
+                    <td><h:selectOneRadio value = "#{userData.user.sex}"> 
+                            <f:selectItem itemValue = "#{userData.user.sex}" itemLabel = "#{userData.user.sex.get(0)}" /> 
+                            <f:selectItem itemValue = "#{userData.user.sex}" itemLabel = "#{userData.user.sex.get(1)}" /> 
+                        </h:selectOneRadio> </td> 
+                </tr> 
+                <tr>
+                    <td> </td>
+                    <td><h:commandButton value = "Sign in" action = "#{userData.addUser()}" /></td>
+                </tr>
+            </table>	
+        </h:form>
+    </h:body>
+</html>
+

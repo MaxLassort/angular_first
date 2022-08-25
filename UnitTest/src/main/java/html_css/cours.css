@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    position: sticky;
+}
+.sous{
+    display: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.mainNav{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 100%;
+}
+.mainNav li:hover {
+    border-bottom: pink 1px solid;
+}
+.mainNav li:hover .sous  {
+    display: block;
+    list-style: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 1rem 0;
+}
+.sous li {
+    margin: 1rem 0 1rem 0;
+}
+.sous li:hover {
+background-color: antiquewhite;
+}
+.sous li a:hover {
+color: orange;
+}
+
