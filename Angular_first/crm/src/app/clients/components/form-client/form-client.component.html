@@ -1,0 +1,49 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="type">lastname</label>
+    <input type="text" class="form-control" id="lastname" formControlName="lastname">
+  </div>
+  <div class="form-group">
+    <label for="type">firstname</label>
+    <input type="text" class="form-control" id="firstname" formControlName="firstname">
+  </div>
+  <div class="form-group">
+    <label for="type">company</label>
+    <input type="text" class="form-control" id="company" formControlName="company">
+  </div>
+  <div class="form-group">
+    <label for="type">mail</label>
+    <input type="text" class="form-control" id="mail" formControlName="mail">
+  </div>
+  <div class="form-group">
+    <label for="type">phone</label>
+    <input type="text" class="form-control" id="phone" formControlName="phone">
+  </div>
+  <div class="form-group">
+    <label for="type">adress</label>
+    <input type="text" class="form-control" id="adress" formControlName="adress">
+  </div>
+  <div class="form-group">
+    <label for="type">zipcode</label>
+    <input type="text" class="form-control" id="zipcode" formControlName="zipcode">
+  </div>
+  <div class="form-group">
+    <label for="type">city</label>
+    <input type="text" class="form-control" id="city" formControlName="city">
+  </div>
+  <div class="form-group">
+    <label for="type">country</label>
+    <input type="text" class="form-control" id="country" formControlName="country">
+  </div>
+
+  <div class="form-group">
+    <label for="status">state</label>
+    <select class="form-select" id="active" formControlName="active">
+      <option *ngFor="let active of active" [value]="active">{{ active }}</option>
+    </select>
+  </div>
+
+  <button [disabled]="this.addForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+

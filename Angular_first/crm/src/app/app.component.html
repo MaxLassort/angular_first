@@ -1,7 +1,20 @@
 <app-ui>
-  <button class="tr-btn"> open/close </button>
+  <!-- <app-icon-nav (click)="changeLogo()" class="tr-btn" *ngIf="open == true"></app-icon-nav>
+  <app-icon-close (click)="changeLogo()" class="tr-btn"*ngIf="open== false"></app-icon-close> -->
+
+
+  <!-- <app-icon-nav (click)="changeLogo()" class="tr-btn" *ngIf="open == true ; else elseBlock"></app-icon-nav>
+  <ng-template #elseBlock> <app-icon-close (click)="changeLogo()" class="tr-btn"></app-icon-close></ng-template> -->
+<!--
+  <div  class="tr-btn" *ngIf="open == true ; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock><app-icon-nav (click)="changeLogo()" class="tr-btn"></app-icon-nav></ng-template>
+<ng-template #elseBlock><app-icon-close (click)="changeLogo()" class="tr-btn"></app-icon-close></ng-template> -->
+
+  <app-icon-nav class="tr-open"></app-icon-nav>
+  <app-icon-close class="tr-close"></app-icon-close>
   <app-header class="tr-header"></app-header>
   <app-nav class="tr-nav"></app-nav>
   <app-footer class="tr-footer"></app-footer>
+  <router-outlet class="tr-content"></router-outlet>
 
 </app-ui>

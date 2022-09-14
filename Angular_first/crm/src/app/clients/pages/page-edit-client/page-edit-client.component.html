@@ -1,1 +1,3 @@
-<p>page-edit-client works!</p>
+<app-template-container>
+  <app-form-client *ngIf="item" [init]="item" (submited)="action($event)" ></app-form-client>
+</app-template-container>

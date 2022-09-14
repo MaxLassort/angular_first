@@ -1,1 +1,5 @@
-<p>page-add-order works!</p>
+<app-template-container title="add">
+  <app-form-order [init]="order" (submitted)="action($event)"></app-form-order>
+</app-template-container>
+<app-btn route="/orders" label="list" className="blue"></app-btn>
+<app-btn route="/orders/edit-order" label="edit" className="green"></app-btn>

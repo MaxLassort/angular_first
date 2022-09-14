@@ -1,1 +1,7 @@
-<p>page-add-client works!</p>
+<app-template-container [title]="title" >
+  <app-form-client [init]="customer" (submited)="action($event)" >
+
+  </app-form-client>
+</app-template-container>
+<app-btn label="list" className="green" route="/clients" ></app-btn>
+

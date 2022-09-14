@@ -1,0 +1,19 @@
+
+.state-canceled{
+  background: var(--app-error);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+.state-option{
+  background: var(--app-warning);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+.state-confirmed{
+  background: var(--app-success);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
