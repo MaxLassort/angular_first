@@ -1,0 +1,12 @@
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th *ngFor="let header of headers">
+        {{ header }}
+      </th>
+    </tr>
+  </thead>
+  <ng-content ></ng-content>
+</table>
